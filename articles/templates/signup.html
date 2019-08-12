@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Django Class Based Views Rock</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <style>
+    .title {
+      text-align: center;
+      font-weight: 200;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+
+    <h2>Sign up</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-dark">Sign up</button>
+      <a class="btn right" href="{% url 'Login' %}">Already a Member?</a>
+    </form>
+
+
+  </div>
+  <div class="col"></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"/>
+</body>
+</html>

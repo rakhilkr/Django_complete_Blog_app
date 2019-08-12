@@ -1,0 +1,16 @@
+{% extends 'articles/articles_base.html' %}
+
+{% block container %}
+  <h3 class="title">Update {{ article.title }}</h3>
+  <form class="card" method="post">
+    <div class="card-content">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <img src="{{ form.image.src }}">
+    </div>
+    <div class="card-action">
+      <a class="btn-flat" href="{{ article.get_absolute_url }}">Cancel</a>
+      <input class="btn" type="submit" value="Update"/>
+    </div>
+  </form>
+{% endblock %}
